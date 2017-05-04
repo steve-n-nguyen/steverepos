@@ -1,0 +1,4 @@
+{
+  "py_test.py::test_capital_case": true,
+  "py_test.py::test_raises_exception_on_non_string_arguments": true
+}

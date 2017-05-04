@@ -12,13 +12,19 @@ element = driver.find_element_by_id("lst-ib")
 element.send_keys("books")
 
 element.send_keys(Keys.RETURN)
-time.sleep(1)
+time.sleep(2)
 
 try:
     driver.find_element_by_partial_link_text("Amazon.com: Books").click()
     print("Pass, you good Steve")
+
 except NoSuchElementException:
     print("Failed, no such element Steve")
+
+
+driver.save_screenshot("C:\\Users\\steve.nguyen\\screenshot.png")
+text = driver.find_element_by_xpath(".//body").text
+print(text)
 
 
 time.sleep(5)

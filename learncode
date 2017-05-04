@@ -1,0 +1,41 @@
+from datetime import datetime
+
+now = datetime.now()
+print("this is the time %s" %now)
+print(now.time())
+print(now.date())
+print('total is %s' %(2**2 <= 2))
+bool_five = 2**2 < 2 or not 2**2 > 2 and 'B' == 'B'
+print('num {1}, bool {0} '.format(now, bool_five))
+bool_one = (2 <=2) and "A" == "A"
+print(bool_one)
+alpha = False
+nameone = input("please enter a word: ")
+while not alpha:
+    if nameone.isalpha():
+        num = len(nameone)
+        print(nameone, num)
+        nameone = nameone.lower()
+        pigword = nameone[1:num] + nameone[0] + "ay"
+        print(pigword)
+        alpha = True
+    else:
+        nameone = input("please enter a word: ")
+
+def num1(n):
+    return n + 1
+def num2(n):
+    return 2 + num1(n)
+n = num
+def cube(n):
+    n = n**3
+    return n
+def by_tree(n):
+    if n % 3 == 0 :
+        return cube(n)
+    else:
+        print('enter a number by 3')
+        return False
+print(" the number %d" %cube(n))
+
+
